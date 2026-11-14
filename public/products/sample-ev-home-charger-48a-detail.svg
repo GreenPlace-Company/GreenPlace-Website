@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img">
+  <title>Sample EV Home Charger 48A, connector</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f6f1e7"/>
+      <stop offset="100%" stop-color="#e6d8c4"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="800" fill="url(#bg)"/>
+  <circle cx="650" cy="110" r="160" fill="#e4efe3"/>
+  <circle cx="120" cy="700" r="140" fill="#efe2cf" opacity="0.8"/>
+  <text x="48" y="68" fill="#143028" font-family="Georgia, serif" font-size="18" letter-spacing="5">SAMPLE</text>
+  
+    <path d="M180 220 C 300 180, 460 260, 520 420" fill="none" stroke="#1f5c3e" stroke-width="28" stroke-linecap="round"/>
+    <rect x="470" y="390" width="160" height="230" rx="36" fill="#1b3d32"/>
+    <rect x="518" y="450" width="64" height="100" rx="16" fill="#e7f2df"/>
+    <circle cx="550" cy="575" r="10" fill="#c6a36a"/>
+  
+  <text x="48" y="758" fill="#3e5148" font-family="Georgia, serif" font-size="16">Placeholder illustration</text>
+</svg>
