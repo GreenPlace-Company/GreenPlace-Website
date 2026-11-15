@@ -1,16 +1,18 @@
 @import "tailwindcss";
 
+/* Green Place Solutions palette. Utility names stay so the layout does not change. */
 :root {
-  --linen: #f3efe6;
-  --paper: #fffdf8;
-  --pine: #143028;
-  --moss: #1f5c3e;
-  --leaf: #e5f0e4;
-  --clay: #7a3e28;
-  --sand: #e4d9c8;
-  --ink: #1a2820;
-  --muted: #3e5148;
-  --brass: #8a6232;
+  --linen: #f7fbf6; /* Cloud — page background, type on dark */
+  --paper: #ffffff;
+  --pine: #0b3a38; /* Ink — dark backgrounds and headings */
+  --moss: #127043; /* Forest — links and secondary text */
+  --leaf: #e0f3d8; /* Mint — light backgrounds */
+  --lime: #93c037; /* Lime — highlights and taglines on dark */
+  --clay: #1e4f58; /* Water — deep accent */
+  --sand: #d5e6ce;
+  --ink: #0b3a38; /* Ink — body text */
+  --muted: #127043; /* Forest */
+  --brass: #67aa31; /* Leaf */
 }
 
 @theme inline {
@@ -19,13 +21,21 @@
   --color-pine: var(--pine);
   --color-moss: var(--moss);
   --color-leaf: var(--leaf);
+  --color-lime: var(--lime);
   --color-clay: var(--clay);
   --color-sand: var(--sand);
   --color-ink: var(--ink);
   --color-muted: var(--muted);
   --color-brass: var(--brass);
-  --font-sans: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-fraunces), ui-serif, Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Brand lockup uses Montserrat Bold for display lines. */
+@layer utilities {
+  .font-display {
+    font-weight: 700;
+  }
 }
 
 body {
@@ -34,7 +44,7 @@ body {
 }
 
 ::selection {
-  background: #cfe0d2;
+  background: var(--leaf);
   color: var(--pine);
 }
 
