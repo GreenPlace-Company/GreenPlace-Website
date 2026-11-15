@@ -26,7 +26,7 @@ export function PolicyLayout({
         <h1 className="mt-2 font-display text-4xl text-pine sm:text-5xl">{title}</h1>
         <p
           role="note"
-          className="mt-6 rounded-2xl border border-clay/30 bg-[#f8efe6] px-4 py-3 text-sm leading-6 text-ink"
+          className="mt-6 rounded-2xl border border-clay/30 bg-leaf px-4 py-3 text-sm leading-6 text-ink"
         >
           <strong>Draft.</strong> This page is a placeholder for review. It is
           not legal advice and it is not the final policy of Green Place

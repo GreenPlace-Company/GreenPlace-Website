@@ -1,5 +1,6 @@
 import { Container } from "@/components/container";
 import { COMPANY_NAME, CONTACT_EMAIL } from "@/lib/site";
+import Image from "next/image";
 import Link from "next/link";
 
 const shopLinks = [
@@ -20,7 +21,16 @@ export function SiteFooter() {
     <footer className="on-dark mt-auto bg-pine text-linen">
       <Container className="grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4">
         <div className="sm:col-span-2">
-          <p className="font-display text-2xl">Green Place Solutions</p>
+          <Image
+            src="/brand/gps-logo-horizontal-reversed.png"
+            alt="Green Place Solutions"
+            width={600}
+            height={247}
+            quality={100}
+            sizes="194px"
+            className="h-20 w-auto"
+            style={{ width: "auto" }}
+          />
           <p className="mt-3 max-w-sm text-sm leading-6 text-linen/80">
             {COMPANY_NAME}, Pennsylvania. A store for a greener world. Orders
             ship direct from the manufacturer.

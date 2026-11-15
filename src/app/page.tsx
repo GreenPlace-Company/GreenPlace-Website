@@ -43,7 +43,7 @@ export default function HomePage() {
       <section className="on-dark bg-pine text-linen">
         <Container className="grid items-center gap-12 py-16 sm:py-24 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
           <div>
-            <p className="text-xs font-medium tracking-[0.18em] text-linen/70 uppercase">
+            <p className="text-xs font-medium tracking-[0.18em] text-lime uppercase">
               Pennsylvania · A greener world
             </p>
             <h1 className="mt-4 max-w-xl font-display text-5xl leading-[1.05] sm:text-6xl">
