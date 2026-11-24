@@ -1,5 +1,5 @@
 import { parseCheckoutItems, resolveCart, shippingCents } from "@/lib/cart";
-import { getSiteUrl } from "@/lib/site";
+import { getRuntimeSiteUrl } from "@/lib/site";
 import { getStripe, isCheckoutConfigured } from "@/lib/stripe";
 import { NextResponse } from "next/server";
 
@@ -61,7 +61,7 @@ export async function POST(request: Request) {
     );
   }
 
-  const siteUrl = getSiteUrl();
+  const siteUrl = getRuntimeSiteUrl();
 
   try {
     const session = await stripe.checkout.sessions.create({

@@ -1,0 +1,22 @@
+# Installed and built inside the image.
+node_modules
+.next
+out
+build
+coverage
+
+# Secrets and local overrides. Next loads .env* during `next build`, and
+# standalone output copies those files into the image. Keep them out.
+.env
+.env.*
+
+# Not needed to run the server.
+.git
+.github
+.vercel
+.cursor
+*.md
+Dockerfile
+npm-debug.log*
+*.tsbuildinfo
+.DS_Store

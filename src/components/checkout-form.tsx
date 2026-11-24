@@ -15,8 +15,9 @@ import { useState } from "react";
 const NOT_ENABLED = "Checkout is not yet enabled.";
 
 export function CheckoutForm({ configured }: { configured: boolean }) {
-  const publishableKey = process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY;
-  const enabled = configured && Boolean(publishableKey);
+  // The server reads both Stripe keys at request time. Checkout redirects to
+  // Stripe, so the publishable key is not loaded in the browser.
+  const enabled = configured;
   const { lines } = useCart();
   const resolved = resolveCart(lines);
   const subtotal = merchandiseSubtotal(resolved);

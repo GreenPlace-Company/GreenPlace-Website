@@ -33,8 +33,10 @@ Copy `.env.example` to `.env.local`. Do not commit real keys.
 | Variable | Where it is used |
 | --- | --- |
 | `STRIPE_SECRET_KEY` | Server only. Creates the Stripe Checkout Session. |
-| `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY` | Browser. Checkout stays disabled until this is set. |
+| `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY` | Public. Both keys must be set or checkout stays disabled. The browser does not load this key; Stripe Checkout collects the card. |
 | `NEXT_PUBLIC_SITE_URL` | Absolute origin for Stripe return URLs, the sitemap, and Open Graph. Example: `http://localhost:3000`. |
+
+Container deployment on Google Cloud Run is described in [DEPLOY-CLOUD-RUN.md](DEPLOY-CLOUD-RUN.md). The Vercel deployment is unchanged.
 
 If either Stripe key is missing, the checkout page shows **Checkout is not yet enabled** and the API returns the same message. The cart still works.
 

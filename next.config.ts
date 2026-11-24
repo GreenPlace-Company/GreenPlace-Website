@@ -1,7 +1,15 @@
 import type { NextConfig } from "next";
 
+/**
+ * The container runs the standalone server. Vercel sets VERCEL=1 and keeps
+ * using its own build output, so this branch stays off there.
+ */
+const containerOutput: Pick<NextConfig, "output"> = process.env.VERCEL
+  ? {}
+  : { output: "standalone" };
+
 const nextConfig: NextConfig = {
-  /* config options here */
+  ...containerOutput,
   images: {
     qualities: [75, 100],
   },
