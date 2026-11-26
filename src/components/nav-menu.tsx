@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 
 const links = [
   { href: "/shop", label: "Shop" },
+  { href: "/blog", label: "Blog" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
@@ -12,6 +13,9 @@ const links = [
 function isActive(pathname: string, href: string) {
   if (href === "/shop") {
     return pathname === "/shop" || pathname.startsWith("/product/");
+  }
+  if (href === "/blog") {
+    return pathname === "/blog" || pathname.startsWith("/blog/");
   }
   return pathname === href;
 }

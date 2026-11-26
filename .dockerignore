@@ -10,12 +10,14 @@ coverage
 .env
 .env.*
 
-# Not needed to run the server.
+# Not needed to run the server. Blog posts are the exception: the image
+# build reads content/blog while prerendering /blog.
 .git
 .github
 .vercel
 .cursor
 *.md
+!content/blog/*.md
 Dockerfile
 npm-debug.log*
 *.tsbuildinfo

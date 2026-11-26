@@ -10,6 +10,12 @@ const containerOutput: Pick<NextConfig, "output"> = process.env.VERCEL
 
 const nextConfig: NextConfig = {
   ...containerOutput,
+  // Standalone tracing does not follow the directory read in src/lib/blog.ts.
+  outputFileTracingIncludes: {
+    "/blog": ["./content/blog/**/*"],
+    "/blog/*": ["./content/blog/**/*"],
+    "/sitemap.xml": ["./content/blog/**/*"],
+  },
   images: {
     qualities: [75, 100],
   },
